@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LozyLoad</title>
+    <style>
+        .images {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 500px;
+        }
+
+        .img-item {
+            height: 220px;
+            width: 220px;
+            margin: 20px;
+        }
+
+        .block {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="images">
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+
+        </ul>
+
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+
+        </ul>
+
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+        </ul>
+
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+
+        </ul>
+
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+        </ul>
+
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+
+        </ul>
+
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./shu3.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./3.jpg">
+            </li>
+        </ul>
+        <ul class="block">
+            <li>
+                <img class="img-item" alt="loading" data-src="./a1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./a2.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing1.jpg">
+            </li>
+            <li>
+                <img class="img-item" alt="loading" data-src="./bing2.jpg">
+            </li>
+        </ul>
+
+
+
+    </div> -->
+    <!--
+	<script type="text/javascript">
+		//获取观察器实例  changes是被观察的对象数组
+		var observer = new IntersectionObserver(function(changes){  
+			console.log(changes);
+			changes.forEach(function(index,item){
+				if(item.intersectionRatio > 0 && item.intersectionRatio < 1)
+					//target：被观察的目标元素，是一个 DOM 节点对象
+					item.target.src = item.target.dataset.src;
+			});
+		});
+		function addObserver(){
+			var listItems = document.querySelectorAll('.img-item');
+			listItems.forEach(function(item){
+				//实例的observe方法可以指定观察哪个DOM节点
+				//开始观察  observe的参数是一个 DOM 节点对象
+				observer.observe(item);
+			});
+		}
+		addObserver();
+	</script>
+    -->
+
+    <p><img class="img-item" alt="loading" src="" data-src="./3.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./a1.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./a2.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./bing1.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./bing2.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./shu2.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./shu3.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./3.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./a1.jpg"></p>
+    <p><img class="img-item" alt="loading" src="" data-src="./a2.jpg"></p>
+    <p><script type="text/javascript">
+        // var imgs = document.querySelectorAll('img');
+        // var lazyload = function () {
+        //     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        //     var winTop = window.innerHeight;
+        //     for (var i = 0; i < imgs.length; i++) {
+        //         if (imgs[i].offsetTop < scrollTop + winTop) {
+        //             imgs[i].src = imgs[i].getAttribute('data-src');
+        //         }
+        //     }
+        // }
+        // function throttle(method, delay) {
+        //     var timer = null;
+        //     return function () {
+        //         var context = this, args = arguments;
+        //         clearTimeout(timer);
+        //         timer = setTimeout(function () {
+        //             method.apply(context, args);
+        //         }, delay);
+        //     }
+        // }
+        // window.onscroll = throttle(lazyload, 200);
+        window.onload = function () {
+            var scrollTop = window.scrollY;
+            var imgs = Array.from(document.querySelectorAll('img'));
+
+            lazyLoad();
+
+            //函数节流模式
+            var canRun = true;
+            window.onscroll = () => {
+                if (!canRun) {
+                    return
+                }
+                canRun = false;
+                setTimeout(() => {
+                    scrollTop = window.scrollY;
+                    lazyLoad();
+                    canRun = true;
+                }, 1000)
+
+            }
+
+            function lazyLoad() {
+                imgs.forEach((item, index) => {
+                    if (item.offsetTop < window.innerHeight + scrollTop) {
+                        // console.log(item.offsetTop)
+                        item.setAttribute('src', item.dataset.src)
+                    }
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
